@@ -30,11 +30,11 @@ const Nav = ({ openNav }: Props) => {
       <div className="flex items-center h-full justify-between w-[90%] xl:w-[80%] mx-auto">
         {/* LOGO */}
         <div className="flex items-center space-x-2">
-          <div className="w-10 h-10 bg-rose-500 rounded-full flex items-center justify-center flex-col">
+          <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center flex-col">
             <TbAirBalloon className="w-6 h-6 text-white" />
           </div>
           <h1 className="text-xl md:text-2xl text-white uppercase font-bold">
-            Tripi
+            MANGBALITRIP
           </h1>
         </div>
         {/* NavLinks  */}
