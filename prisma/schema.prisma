@@ -1,0 +1,116 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Destination {
+  id          Int       @id @default(autoincrement())
+  name        String
+  description String
+  image       String
+  price       Float
+  rating      Float     @default(0)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  packages    Package[]
+  reviews     Review[]
+
+  @@map("destinations")
+}
+
+model Hotel {
+  id          Int       @id @default(autoincrement())
+  name        String
+  location    String
+  description String
+  image       String
+  price       Float
+  rating      Float     @default(0)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  packages    Package[]
+  reviews     Review[]
+
+  @@map("hotels")
+}
+
+model Review {
+  id            Int          @id @default(autoincrement())
+  content       String
+  rating        Float
+  userId        Int
+  destinationId Int?
+  hotelId       Int?
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+  destination   Destination? @relation(fields: [destinationId], references: [id])
+  hotel         Hotel?       @relation(fields: [hotelId], references: [id])
+  user          User         @relation(fields: [userId], references: [id])
+
+  @@map("reviews")
+}
+
+model Package {
+  id            Int         @id @default(autoincrement())
+  name          String
+  description   String
+  price         Float
+  duration      Int
+  destinationId Int
+  hotelId       Int?
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+  bookings      Booking[]
+  destination   Destination @relation(fields: [destinationId], references: [id])
+  hotel         Hotel?      @relation(fields: [hotelId], references: [id])
+
+  @@map("packages")
+}
+
+model User {
+  id        Int       @id @default(autoincrement())
+  name      String
+  email     String    @unique
+  password  String
+  role      Role      @default(USER)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  bookings  Booking[]
+  reviews   Review[]
+
+  @@map("users")
+}
+
+model Booking {
+  id         Int      @id @default(autoincrement())
+  userId     Int
+  packageId  Int
+  startDate  DateTime
+  endDate    DateTime
+  status     Status   @default(PENDING)
+  totalPrice Float
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  package    Package  @relation(fields: [packageId], references: [id])
+  user       User     @relation(fields: [userId], references: [id])
+
+  @@map("bookings")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum Status {
+  PENDING
+  CONFIRMED
+  CANCELLED
+  COMPLETED
+}
