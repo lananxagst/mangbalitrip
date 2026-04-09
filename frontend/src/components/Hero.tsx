@@ -40,7 +40,7 @@ export default function Hero() {
           {t("hero.badge")}
         </div>
 
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-4 drop-shadow-2xl">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-4 drop-shadow-2xl">
           {t("hero.title")}
           <span className="text-primary-400"> {t("hero.titleHighlight")}</span>
         </h1>
@@ -62,8 +62,9 @@ export default function Hero() {
               placeholder={t("hero.searchPlaceholder")}
               className="flex-1 px-3 py-3.5 text-gray-800 placeholder-gray-400 bg-transparent outline-none text-base"
             />
-            <button className="bg-primary-500 hover:bg-primary-600 text-white font-semibold px-6 py-2.5 rounded-xl transition-colors text-sm whitespace-nowrap">
-              {t("hero.searchBtn")}
+            <button className="bg-primary-500 hover:bg-primary-600 text-white font-semibold px-3 sm:px-6 py-2.5 rounded-xl transition-colors text-sm flex-shrink-0 flex items-center gap-1.5">
+              <Search size={16} className="sm:hidden" />
+              <span className="hidden sm:inline">{t("hero.searchBtn")}</span>
             </button>
           </div>
 

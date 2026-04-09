@@ -77,7 +77,7 @@ export default function AirportTransfer() {
                 />
               </div>
 
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 min-[420px]:grid-cols-2 gap-3">
                 <div>
                   <label className="text-xs font-semibold text-gray-600 mb-1.5 block uppercase tracking-wide">
                     {t("airportTransfer.dateLabel")}

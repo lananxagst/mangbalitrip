@@ -9,7 +9,7 @@ export default function PopularDestinations() {
     <section className="py-14 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-8">
           <div className="flex items-center gap-2">
             <MapPin className="text-primary-500" size={22} />
             <h2 className="text-2xl font-bold text-gray-900">{t("destinations.title")}</h2>
@@ -41,7 +41,7 @@ export default function PopularDestinations() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <div className="absolute inset-0 flex items-end p-4">
-                <span className="text-white font-bold text-lg drop-shadow-lg">{dest.name}</span>
+                <span className="text-white font-bold text-sm sm:text-base drop-shadow-lg">{dest.name}</span>
               </div>
               {/* Hover overlay */}
               <div className="absolute inset-0 bg-primary-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

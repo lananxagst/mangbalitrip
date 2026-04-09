@@ -26,7 +26,7 @@ export default function PackageCard({ pkg, size = "md" }: Props) {
         <img
           src={pkg.image}
           alt={pkg.title}
-          className={`w-full object-cover group-hover:scale-105 transition-transform duration-500 ${size === "lg" ? "h-52" : "h-44"}`}
+          className={`w-full object-cover group-hover:scale-105 transition-transform duration-500 ${size === "lg" ? "h-44 sm:h-52" : "h-36 sm:h-44"}`}
           loading="lazy"
         />
         {/* Badge */}
@@ -44,7 +44,7 @@ export default function PackageCard({ pkg, size = "md" }: Props) {
       </div>
 
       {/* Content */}
-      <div className="p-4">
+      <div className="p-3 sm:p-4">
         <h3 className="font-semibold text-gray-900 text-sm leading-snug mb-1.5 line-clamp-2 group-hover:text-primary-600 transition-colors">
           {pkg.title}
         </h3>

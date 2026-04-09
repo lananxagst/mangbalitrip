@@ -14,7 +14,7 @@ export default function TravelGuide() {
     <section className="py-14 bg-orange-50/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="flex items-start justify-between mb-8">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between mb-8">
           <div className="flex items-start gap-3">
             <div className="p-2.5 bg-primary-500 rounded-xl mt-0.5">
               <BookOpen className="text-white" size={18} />

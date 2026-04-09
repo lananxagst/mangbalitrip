@@ -19,7 +19,7 @@ export default function AllActivities({ activeCategory }: Props) {
     <section className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-6">
           <div>
             <h2 className="text-2xl font-bold text-gray-900">{t("activities.title")}</h2>
             <p className="text-gray-500 text-sm mt-1">{allActivities.length} {t("activities.found")}</p>

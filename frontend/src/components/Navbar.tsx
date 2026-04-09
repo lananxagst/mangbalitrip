@@ -179,7 +179,8 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-3">
+        <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-4">
+          {/* Book Airport CTA */}
           <a
             href="#airport-transfer"
             className="flex items-center gap-2 bg-gray-900 text-white text-sm font-semibold px-4 py-3 rounded-full w-full justify-center"
@@ -188,28 +189,77 @@ export default function Navbar() {
             <Plane size={14} />
             {t("nav.bookAirport")}
           </a>
-          <div className="flex items-center justify-between pt-2">
-            <div className="flex items-center gap-4">
-              <button className="flex items-center gap-1 text-gray-600 text-sm">
-                <Globe size={16} /> {currentLang.flag} {currentLang.label}
-              </button>
-              <button className="flex items-center gap-1 text-gray-600 text-sm">
-                <DollarSign size={16} /> IDR
-              </button>
+
+          {/* Language selector */}
+          <div>
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2 flex items-center gap-1">
+              <Globe size={12} /> Language
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {LANGUAGES.map((l) => (
+                <button
+                  key={l.code}
+                  onClick={() => { handleLangChange(l.code); }}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm border transition-all ${
+                    i18n.language === l.code
+                      ? "bg-gray-900 text-white border-gray-900"
+                      : "bg-white text-gray-600 border-gray-200 hover:border-gray-400"
+                  }`}
+                >
+                  {l.flag} {l.label}
+                </button>
+              ))}
             </div>
+          </div>
+
+          {/* Currency selector */}
+          <div>
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2 flex items-center gap-1">
+              <DollarSign size={12} /> Currency
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {["IDR", "USD", "EUR", "SGD"].map((c) => (
+                <button
+                  key={c}
+                  onClick={() => { handleCurrencyChange(c); }}
+                  className={`px-3 py-1.5 rounded-full text-sm border transition-all ${
+                    currency === c
+                      ? "bg-gray-900 text-white border-gray-900"
+                      : "bg-white text-gray-600 border-gray-200 hover:border-gray-400"
+                  }`}
+                >
+                  {c}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Divider + user */}
+          <div className="border-t border-gray-100 pt-3">
             {user ? (
-              <button
-                onClick={() => { logout(); setIsOpen(false); }}
-                className="flex items-center gap-2 text-red-500 text-sm font-medium"
-              >
-                <LogOut size={15} /> Log Out ({user.name})
-              </button>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-full bg-primary-500 flex items-center justify-center text-white text-xs font-bold">
+                    {user.name.charAt(0).toUpperCase()}
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-gray-900">{user.name}</p>
+                    <p className="text-xs text-gray-400">{user.email}</p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => { logout(); setIsOpen(false); }}
+                  className="flex items-center gap-1.5 text-red-500 text-sm font-medium"
+                >
+                  <LogOut size={15} /> Log Out
+                </button>
+              </div>
             ) : (
               <button
                 onClick={() => { openAuthModal("login"); setIsOpen(false); }}
-                className="flex items-center gap-2 text-gray-700 text-sm font-medium"
+                className="w-full flex items-center justify-center gap-2 border border-gray-200 text-gray-700 text-sm font-semibold py-2.5 rounded-xl hover:border-primary-400 hover:text-primary-500 transition-all"
               >
-                <User size={15} /> Log In
+                <User size={15} /> Log In / Register
               </button>
             )}
           </div>

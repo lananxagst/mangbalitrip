@@ -42,7 +42,7 @@ export default function DriverPackages() {
               key={pkg.id}
               className={`relative rounded-3xl p-6 flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${
                 pkg.isHighlighted
-                  ? "bg-primary-500 text-white ring-4 ring-primary-400/50 scale-105"
+                  ? "bg-primary-500 text-white ring-4 ring-primary-400/50 sm:scale-105 mt-4 sm:mt-0"
                   : "bg-white/10 backdrop-blur-sm border border-white/10 text-white hover:bg-white/15"
               }`}
             >
