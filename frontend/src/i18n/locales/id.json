@@ -1,0 +1,166 @@
+{
+  "nav": {
+    "bookAirport": "PESAN TRANSFER BANDARA"
+  },
+  "hero": {
+    "badge": "#1 Operator Tur Bali & Driver Pribadi",
+    "title": "Jelajahi Bali Bersama",
+    "titleHighlight": "Driver Pribadi Anda",
+    "subtitle": "25.000+ Ulasan Luar Biasa • Pakar Lokal Terpercaya • Tur Pribadi & Kustom",
+    "searchPlaceholder": "Cari tur, aktivitas, destinasi...",
+    "searchBtn": "Cari",
+    "instantConfirmation": "Konfirmasi Instan",
+    "freeCancellation": "Pembatalan Gratis",
+    "bestPrice": "Jaminan Harga Terbaik",
+    "scroll": "Gulir"
+  },
+  "categories": {
+    "All": "Semua",
+    "Trekking": "Trekking",
+    "Sightseeing Tours": "Tur Wisata",
+    "Outdoor Activities": "Aktivitas Outdoor",
+    "Cultural Tours": "Tur Budaya",
+    "Water Sports": "Olahraga Air",
+    "Food & Dining": "Kuliner",
+    "Tickets": "Tiket"
+  },
+  "topPicks": {
+    "title": "Pilihan Terbaik untuk Anda"
+  },
+  "trust": {
+    "safe": "Aman, mudah, dan terpercaya",
+    "reviews": "25.000+ ulasan wisatawan terverifikasi",
+    "expert": "Pakar Lokal Bali",
+    "worth": "Benar-benar sepadan harganya"
+  },
+  "driverPackages": {
+    "sectionBadge": "Paket Driver Pribadi",
+    "title": "Pilih Paket Terbaik Anda",
+    "subtitle": "Driver pribadi profesional untuk setiap kesempatan — dari transfer bandara hingga petualangan multi-hari di Bali.",
+    "mostPopular": "⭐ Paling Populer",
+    "bookNow": "Pesan Sekarang",
+    "perPerson": "/ orang",
+    "packages": {
+      "airport": {
+        "title": "Transfer Bandara",
+        "description": "Layanan jemput & antar bandara yang nyaman dan terpercaya ke mana saja di Bali",
+        "duration": "1 arah",
+        "features": ["Jemput & Sambut", "Door to Door", "Kendaraan AC", "Air Mineral Gratis"]
+      },
+      "halfDay": {
+        "title": "Tur Setengah Hari",
+        "description": "Jelajahi tempat-tempat terbaik Bali dalam tur pribadi santai setengah hari",
+        "duration": "4-5 jam",
+        "features": ["Driver Pribadi", "Kendaraan AC", "Bensin Termasuk", "Rute Fleksibel"]
+      },
+      "fullDay": {
+        "title": "Tur Seharian",
+        "description": "Pengalaman Bali lengkap dengan driver pribadi yang mendampingi Anda sepanjang hari",
+        "duration": "8-10 jam",
+        "features": ["Driver Pribadi", "Kendaraan AC", "Bensin Termasuk", "Itinerari Kustom", "Air Mineral Gratis"]
+      },
+      "multiDay": {
+        "title": "Paket Multi-Hari",
+        "description": "Petualangan Bali terbaik dengan driver pribadi selama beberapa hari",
+        "duration": "per hari",
+        "features": ["Driver Tetap", "Kendaraan AC", "Bensin Termasuk", "Jemput Hotel", "Rute Kustom", "Dukungan 24/7"]
+      }
+    }
+  },
+  "airportTransfer": {
+    "sectionBadge": "Transfer Bandara",
+    "title": "Transfer Bandara",
+    "titleHighlight": "Tanpa Ribet",
+    "titleSuffix": "di Bali",
+    "description": "Mulai atau akhiri perjalanan Bali Anda dengan nyaman. Driver profesional kami akan menjemput Anda di bandara dan mengantar langsung ke tujuan — tanpa tawar-menawar, tanpa stres.",
+    "features": {
+      "airports": "Semua bandara Bali (DPS - Ngurah Rai)",
+      "dropoff": "Antar ke hotel, villa, atau alamat mana saja di Bali",
+      "private": "Kendaraan pribadi, bukan shuttle bersama",
+      "247": "Layanan 24/7, kapan saja siang atau malam"
+    },
+    "formTitle": "Pesan Transfer Bandara",
+    "arrival": "Kedatangan",
+    "departure": "Keberangkatan",
+    "dropoffLabel": "Lokasi Tujuan",
+    "pickupLabel": "Lokasi Penjemputan",
+    "locationPlaceholder": "Nama hotel / villa atau alamat",
+    "dateLabel": "Tanggal",
+    "passengersLabel": "Penumpang",
+    "searchBtn": "Cari Transfer",
+    "guarantee": "Pembatalan gratis • Konfirmasi instan • Jaminan harga terbaik"
+  },
+  "activities": {
+    "title": "Semua Aktivitas",
+    "found": "aktivitas ditemukan",
+    "filter": "Filter",
+    "seeMore": "Lihat Lebih Banyak",
+    "noResults": "Tidak ada aktivitas untuk kategori ini."
+  },
+  "destinations": {
+    "title": "Destinasi Populer",
+    "seeMore": "Lihat Semua"
+  },
+  "guide": {
+    "title": "Panduan & Tips Perjalanan",
+    "subtitle": "Temukan tempat menakjubkan dan tips dari orang dalam",
+    "seeMore": "Lihat Semua"
+  },
+  "booking": {
+    "title": "Pesan Aktivitas",
+    "subtitle": "Selesaikan pemesanan Anda dalam 3 langkah mudah",
+    "steps": {
+      "details": "Detail",
+      "contact": "Kontak",
+      "confirm": "Konfirmasi"
+    },
+    "packageSummary": "Ringkasan Pemesanan",
+    "dateLabel": "Tanggal Tur",
+    "datePlaceholder": "Pilih tanggal",
+    "passengersLabel": "Jumlah Penumpang",
+    "maxPassengers": "maks 20",
+    "pickupLabel": "Lokasi Penjemputan",
+    "pickupPlaceholder": "Nama hotel, alamat villa, atau area...",
+    "estimatedTotal": "Perkiraan Total",
+    "nameLabel": "Nama Lengkap",
+    "namePlaceholder": "Nama lengkap Anda",
+    "whatsappLabel": "Nomor WhatsApp",
+    "whatsappPlaceholder": "+62 812-xxxx-xxxx",
+    "emailLabel": "Email",
+    "emailOptional": "(opsional)",
+    "emailPlaceholder": "email@anda.com",
+    "notesLabel": "Permintaan Khusus",
+    "notesOptional": "(opsional)",
+    "notesPlaceholder": "Kebutuhan diet, aksesibilitas, permintaan khusus...",
+    "totalPayment": "Total Pembayaran",
+    "freeCancel": "Pembatalan gratis hingga 24 jam sebelum tur. Konfirmasi instan via WhatsApp.",
+    "continue": "Lanjutkan",
+    "back": "Kembali",
+    "confirmWhatsapp": "Konfirmasi via WhatsApp",
+    "noCredit": "Pembatalan gratis · Tanpa kartu kredit",
+    "contactNote": "Kami akan menggunakan detail ini untuk mengkonfirmasi pemesanan Anda."
+  },
+  "footer": {
+    "tagline": "Driver pribadi dan operator tur terpercaya #1 di Bali. Jelajahi Bali dengan aman bersama driver lokal profesional kami.",
+    "services": "Layanan",
+    "destinations": "Destinasi",
+    "company": "Perusahaan",
+    "links": {
+      "services": ["Transfer Bandara", "Driver Pribadi", "Tur Harian", "Tur Multi-Hari", "Tur Kustom"],
+      "destinations": ["Ubud", "Kuta & Seminyak", "Uluwatu", "Canggu", "Nusa Penida"],
+      "company": ["Tentang Kami", "Kontak", "Blog", "FAQ", "Syarat & Ketentuan"]
+    },
+    "rights": "Hak cipta dilindungi.",
+    "privacy": "Kebijakan Privasi",
+    "terms": "Syarat Layanan",
+    "cookies": "Kebijakan Cookie"
+  },
+  "common": {
+    "perPerson": "/ orang",
+    "from": "Mulai",
+    "dayTrip": "Perjalanan Sehari",
+    "reviews": "ulasan",
+    "passenger": "penumpang",
+    "passengers": "penumpang"
+  }
+}

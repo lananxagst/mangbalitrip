@@ -1,0 +1,166 @@
+{
+  "nav": {
+    "bookAirport": "空港送迎を予約"
+  },
+  "hero": {
+    "badge": "#1 バリ島ツアーオペレーター & プライベートドライバー",
+    "title": "プライベートドライバーと",
+    "titleHighlight": "バリ島を探索",
+    "subtitle": "25,000件以上の優良レビュー • 信頼できる地元専門家 • プライベート＆カスタムツアー",
+    "searchPlaceholder": "ツアー、アクティビティ、目的地を検索...",
+    "searchBtn": "検索",
+    "instantConfirmation": "即時確認",
+    "freeCancellation": "無料キャンセル",
+    "bestPrice": "最低価格保証",
+    "scroll": "スクロール"
+  },
+  "categories": {
+    "All": "すべて",
+    "Trekking": "トレッキング",
+    "Sightseeing Tours": "観光ツアー",
+    "Outdoor Activities": "アウトドア活動",
+    "Cultural Tours": "文化ツアー",
+    "Water Sports": "ウォータースポーツ",
+    "Food & Dining": "グルメ",
+    "Tickets": "チケット"
+  },
+  "topPicks": {
+    "title": "あなたへのおすすめ"
+  },
+  "trust": {
+    "safe": "安全・簡単・信頼できる",
+    "reviews": "25,000件以上の検証済み旅行者レビュー",
+    "expert": "バリ島ローカル専門家",
+    "worth": "価格以上の価値あり"
+  },
+  "driverPackages": {
+    "sectionBadge": "プライベートドライバーパッケージ",
+    "title": "最適なプランをお選びください",
+    "subtitle": "空港送迎からバリ島の数日間の冒険まで、あらゆるシーンに対応するプロのプライベートドライバー。",
+    "mostPopular": "⭐ 最も人気",
+    "bookNow": "今すぐ予約",
+    "perPerson": "/ 人",
+    "packages": {
+      "airport": {
+        "title": "空港送迎",
+        "description": "バリ島のどこへでも快適で信頼できる空港の送り迎えサービス",
+        "duration": "片道",
+        "features": ["出迎えサービス", "ドア・ツー・ドア", "エアコン車", "無料飲料水"]
+      },
+      "halfDay": {
+        "title": "半日ツアー",
+        "description": "リラックスした半日プライベートツアーでバリ島の観光スポットを巡る",
+        "duration": "4〜5時間",
+        "features": ["専属ドライバー", "エアコン車", "燃料込み", "柔軟なルート"]
+      },
+      "fullDay": {
+        "title": "1日ツアー",
+        "description": "専属プライベートドライバーが一日中ご案内する完全なバリ島体験",
+        "duration": "8〜10時間",
+        "features": ["専属ドライバー", "エアコン車", "燃料込み", "カスタム旅程", "無料飲料水"]
+      },
+      "multiDay": {
+        "title": "複数日パッケージ",
+        "description": "プライベートドライバーと複数日かけて楽しむ究極のバリ島アドベンチャー",
+        "duration": "1日あたり",
+        "features": ["専属ドライバー", "エアコン車", "燃料込み", "ホテル送迎", "カスタムルート", "24時間サポート"]
+      }
+    }
+  },
+  "airportTransfer": {
+    "sectionBadge": "空港送迎",
+    "title": "ストレスフリーな",
+    "titleHighlight": "空港送迎",
+    "titleSuffix": "バリ島で",
+    "description": "快適にバリ島の旅を始めましょう。プロのドライバーが空港でお出迎えし、目的地まで直接お連れします。交渉不要、ストレスなし。",
+    "features": {
+      "airports": "バリ島全空港対応（DPS - ングラ・ライ国際空港）",
+      "dropoff": "バリ島内の任意のホテル、ヴィラ、住所へ送迎",
+      "private": "プライベート車両、相乗りなし",
+      "247": "24時間365日対応、昼夜問わず"
+    },
+    "formTitle": "空港送迎を予約",
+    "arrival": "到着",
+    "departure": "出発",
+    "dropoffLabel": "降車場所",
+    "pickupLabel": "乗車場所",
+    "locationPlaceholder": "ホテル名、ヴィラ名、または住所を入力",
+    "dateLabel": "日付",
+    "passengersLabel": "乗客数",
+    "searchBtn": "送迎を検索",
+    "guarantee": "無料キャンセル • 即時確認 • 最低価格保証"
+  },
+  "activities": {
+    "title": "すべてのアクティビティ",
+    "found": "件のアクティビティ",
+    "filter": "フィルター",
+    "seeMore": "もっと見る",
+    "noResults": "このカテゴリにはアクティビティがありません。"
+  },
+  "destinations": {
+    "title": "人気の目的地",
+    "seeMore": "もっと見る"
+  },
+  "guide": {
+    "title": "旅行ガイド＆ヒント",
+    "subtitle": "素晴らしい場所と現地のヒントを発見",
+    "seeMore": "もっと見る"
+  },
+  "booking": {
+    "title": "アクティビティを予約",
+    "subtitle": "3つの簡単なステップで予約完了",
+    "steps": {
+      "details": "詳細",
+      "contact": "連絡先",
+      "confirm": "確認"
+    },
+    "packageSummary": "予約内容",
+    "dateLabel": "ツアー日程",
+    "datePlaceholder": "日付を選択",
+    "passengersLabel": "参加人数",
+    "maxPassengers": "最大20人",
+    "pickupLabel": "乗車場所",
+    "pickupPlaceholder": "ホテル名、ヴィラの住所、またはエリア...",
+    "estimatedTotal": "概算合計",
+    "nameLabel": "お名前（フルネーム）",
+    "namePlaceholder": "フルネームを入力",
+    "whatsappLabel": "WhatsApp番号",
+    "whatsappPlaceholder": "+62 812-xxxx-xxxx",
+    "emailLabel": "メールアドレス",
+    "emailOptional": "（任意）",
+    "emailPlaceholder": "your@email.com",
+    "notesLabel": "特別なリクエスト",
+    "notesOptional": "（任意）",
+    "notesPlaceholder": "食事制限、バリアフリー、特別なリクエストなど...",
+    "totalPayment": "合計支払額",
+    "freeCancel": "ツアー24時間前まで無料キャンセル可。WhatsAppで即時確認。",
+    "continue": "次へ",
+    "back": "戻る",
+    "confirmWhatsapp": "WhatsAppで確認する",
+    "noCredit": "無料キャンセル · クレジットカード不要",
+    "contactNote": "この情報を使って予約を確認いたします。"
+  },
+  "footer": {
+    "tagline": "バリ島で最も信頼されるプライベートドライバー＆ツアーオペレーター。プロの地元ドライバーと安全にバリ島を探索。",
+    "services": "サービス",
+    "destinations": "目的地",
+    "company": "会社情報",
+    "links": {
+      "services": ["空港送迎", "プライベートドライバー", "日帰りツアー", "複数日ツアー", "カスタムツアー"],
+      "destinations": ["ウブド", "クタ & スミニャック", "ウルワツ", "チャングー", "ヌサペニダ島"],
+      "company": ["会社概要", "お問い合わせ", "ブログ", "よくある質問", "利用規約"]
+    },
+    "rights": "全著作権所有。",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "cookies": "Cookieポリシー"
+  },
+  "common": {
+    "perPerson": "/ 人",
+    "from": "から",
+    "dayTrip": "日帰り旅行",
+    "reviews": "件のレビュー",
+    "passenger": "人",
+    "passengers": "人"
+  }
+}

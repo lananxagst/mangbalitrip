@@ -1,0 +1,166 @@
+{
+  "nav": {
+    "bookAirport": "预订机场接送"
+  },
+  "hero": {
+    "badge": "#1 巴厘岛旅游运营商 & 私人司机",
+    "title": "与您的",
+    "titleHighlight": "私人司机",
+    "subtitle": "25,000+ 优质评价 • 值得信赖的本地专家 • 私人定制游",
+    "searchPlaceholder": "搜索旅游、活动、目的地...",
+    "searchBtn": "搜索",
+    "instantConfirmation": "即时确认",
+    "freeCancellation": "免费取消",
+    "bestPrice": "最优价格保证",
+    "scroll": "滚动"
+  },
+  "categories": {
+    "All": "全部",
+    "Trekking": "徒步",
+    "Sightseeing Tours": "观光游",
+    "Outdoor Activities": "户外活动",
+    "Cultural Tours": "文化游",
+    "Water Sports": "水上运动",
+    "Food & Dining": "美食",
+    "Tickets": "门票"
+  },
+  "topPicks": {
+    "title": "为您精选"
+  },
+  "trust": {
+    "safe": "安全、简便、值得信赖",
+    "reviews": "25,000+ 已验证旅行者评价",
+    "expert": "巴厘岛本地专家",
+    "worth": "物超所值"
+  },
+  "driverPackages": {
+    "sectionBadge": "私人司机套餐",
+    "title": "选择您的完美出行方案",
+    "subtitle": "专业私人司机满足各种需求——从机场接送到巴厘岛多日探险。",
+    "mostPopular": "⭐ 最受欢迎",
+    "bookNow": "立即预订",
+    "perPerson": "/ 人",
+    "packages": {
+      "airport": {
+        "title": "机场接送",
+        "description": "巴厘岛各地舒适可靠的机场接送服务",
+        "duration": "单程",
+        "features": ["迎宾接机", "门到门服务", "空调车辆", "免费饮用水"]
+      },
+      "halfDay": {
+        "title": "半日游",
+        "description": "轻松悠闲地游览巴厘岛顶级景点的半日私人游",
+        "duration": "4-5小时",
+        "features": ["私人司机", "空调车辆", "含油费", "灵活路线"]
+      },
+      "fullDay": {
+        "title": "全日游",
+        "description": "由专属私人司机全天陪同的完整巴厘岛体验",
+        "duration": "8-10小时",
+        "features": ["私人司机", "空调车辆", "含油费", "定制行程", "免费饮用水"]
+      },
+      "multiDay": {
+        "title": "多日套餐",
+        "description": "由私人司机全程陪同的终极巴厘岛多日探险",
+        "duration": "每天",
+        "features": ["专属司机", "空调车辆", "含油费", "酒店接送", "定制路线", "24/7支持"]
+      }
+    }
+  },
+  "airportTransfer": {
+    "sectionBadge": "机场接送",
+    "title": "轻松便捷的",
+    "titleHighlight": "机场接送",
+    "titleSuffix": "服务",
+    "description": "舒适开始或结束您的巴厘岛之旅。我们的专业司机将在机场迎接您，直接送达目的地——无需讨价还价，毫无压力。",
+    "features": {
+      "airports": "覆盖所有巴厘岛机场（DPS - 伍拉·赖国际机场）",
+      "dropoff": "送达巴厘岛任意酒店、别墅或地址",
+      "private": "私人车辆，非拼车",
+      "247": "24/7全天候服务"
+    },
+    "formTitle": "预订机场接送",
+    "arrival": "到达",
+    "departure": "出发",
+    "dropoffLabel": "目的地",
+    "pickupLabel": "上车地点",
+    "locationPlaceholder": "输入酒店/别墅名称或地址",
+    "dateLabel": "日期",
+    "passengersLabel": "乘客人数",
+    "searchBtn": "查询接送",
+    "guarantee": "免费取消 • 即时确认 • 最优价格保证"
+  },
+  "activities": {
+    "title": "全部活动",
+    "found": "个活动",
+    "filter": "筛选",
+    "seeMore": "查看更多活动",
+    "noResults": "该分类下暂无活动。"
+  },
+  "destinations": {
+    "title": "热门目的地",
+    "seeMore": "查看更多"
+  },
+  "guide": {
+    "title": "旅行指南与攻略",
+    "subtitle": "探索精彩地点和内部攻略",
+    "seeMore": "查看更多"
+  },
+  "booking": {
+    "title": "预订活动",
+    "subtitle": "3个简单步骤完成预订",
+    "steps": {
+      "details": "详情",
+      "contact": "联系",
+      "confirm": "确认"
+    },
+    "packageSummary": "预订摘要",
+    "dateLabel": "游览日期",
+    "datePlaceholder": "选择日期",
+    "passengersLabel": "乘客人数",
+    "maxPassengers": "最多20人",
+    "pickupLabel": "上车地点",
+    "pickupPlaceholder": "酒店名称、别墅地址或区域...",
+    "estimatedTotal": "预计总价",
+    "nameLabel": "姓名",
+    "namePlaceholder": "您的全名",
+    "whatsappLabel": "WhatsApp号码",
+    "whatsappPlaceholder": "+62 812-xxxx-xxxx",
+    "emailLabel": "邮箱",
+    "emailOptional": "（可选）",
+    "emailPlaceholder": "your@email.com",
+    "notesLabel": "特殊要求",
+    "notesOptional": "（可选）",
+    "notesPlaceholder": "饮食要求、无障碍需求、特殊请求...",
+    "totalPayment": "总付款金额",
+    "freeCancel": "游览前24小时内免费取消，WhatsApp即时确认。",
+    "continue": "继续",
+    "back": "返回",
+    "confirmWhatsapp": "通过WhatsApp确认",
+    "noCredit": "免费取消 · 无需信用卡",
+    "contactNote": "我们将使用这些信息确认您的预订。"
+  },
+  "footer": {
+    "tagline": "巴厘岛#1值得信赖的私人司机和旅游运营商。与我们的专业本地司机安全探索巴厘岛。",
+    "services": "服务",
+    "destinations": "目的地",
+    "company": "公司",
+    "links": {
+      "services": ["机场接送", "私人司机", "一日游", "多日游", "定制游"],
+      "destinations": ["乌布", "库塔 & 水明漾", "乌鲁瓦图", "水古", "佩尼达岛"],
+      "company": ["关于我们", "联系我们", "博客", "常见问题", "条款与条件"]
+    },
+    "rights": "版权所有。",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "cookies": "Cookie政策"
+  },
+  "common": {
+    "perPerson": "/ 人",
+    "from": "起",
+    "dayTrip": "一日游",
+    "reviews": "条评价",
+    "passenger": "位乘客",
+    "passengers": "位乘客"
+  }
+}

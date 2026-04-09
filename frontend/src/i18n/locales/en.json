@@ -1,0 +1,166 @@
+{
+  "nav": {
+    "bookAirport": "BOOK AIRPORT TRANSFER"
+  },
+  "hero": {
+    "badge": "#1 Bali Tour Operator & Private Driver",
+    "title": "Explore Bali With Your",
+    "titleHighlight": "Private Driver",
+    "subtitle": "25,000+ Excellent Reviews • Trusted Local Experts • Private & Custom Tours",
+    "searchPlaceholder": "Search tours, activities, destinations...",
+    "searchBtn": "Search",
+    "instantConfirmation": "Instant Confirmation",
+    "freeCancellation": "Free Cancellation",
+    "bestPrice": "Best Price Guarantee",
+    "scroll": "Scroll"
+  },
+  "categories": {
+    "All": "All",
+    "Trekking": "Trekking",
+    "Sightseeing Tours": "Sightseeing Tours",
+    "Outdoor Activities": "Outdoor Activities",
+    "Cultural Tours": "Cultural Tours",
+    "Water Sports": "Water Sports",
+    "Food & Dining": "Food & Dining",
+    "Tickets": "Tickets"
+  },
+  "topPicks": {
+    "title": "Top Picks for You"
+  },
+  "trust": {
+    "safe": "Safe, easy, and trusted",
+    "reviews": "25,000+ verified traveler reviews",
+    "expert": "Bali Local expert",
+    "worth": "Totally worth the price"
+  },
+  "driverPackages": {
+    "sectionBadge": "Private Driver Packages",
+    "title": "Choose Your Perfect Ride",
+    "subtitle": "Professional private drivers for every occasion — from airport transfers to multi-day adventures across Bali.",
+    "mostPopular": "⭐ Most Popular",
+    "bookNow": "Book Now",
+    "perPerson": "/ person",
+    "packages": {
+      "airport": {
+        "title": "Airport Transfer",
+        "description": "Comfortable & reliable airport pickup and drop-off service anywhere in Bali",
+        "duration": "1-way",
+        "features": ["Meet & Greet", "Door to Door", "AC Vehicle", "Free Water"]
+      },
+      "halfDay": {
+        "title": "Half Day Tour",
+        "description": "Explore Bali's top attractions in a relaxed half-day private tour",
+        "duration": "4-5 hours",
+        "features": ["Personal Driver", "AC Vehicle", "Fuel Included", "Flexible Route"]
+      },
+      "fullDay": {
+        "title": "Full Day Tour",
+        "description": "A complete Bali experience with a dedicated private driver guiding you all day",
+        "duration": "8-10 hours",
+        "features": ["Personal Driver", "AC Vehicle", "Fuel Included", "Custom Itinerary", "Free Water"]
+      },
+      "multiDay": {
+        "title": "Multi-Day Package",
+        "description": "The ultimate Bali adventure with a private driver for multiple days",
+        "duration": "per day",
+        "features": ["Dedicated Driver", "AC Vehicle", "Fuel Included", "Hotel Pickup", "Custom Route", "24/7 Support"]
+      }
+    }
+  },
+  "airportTransfer": {
+    "sectionBadge": "Airport Transfer",
+    "title": "Hassle-Free Airport",
+    "titleHighlight": "Transfers",
+    "titleSuffix": "in Bali",
+    "description": "Start or end your Bali journey in comfort. Our professional drivers will meet you at the airport and take you directly to your destination — no haggling, no stress.",
+    "features": {
+      "airports": "All Bali airports covered (DPS - Ngurah Rai)",
+      "dropoff": "Drop-off to any hotel, villa, or address in Bali",
+      "private": "Private vehicle, no shared transfers",
+      "247": "24/7 service, any time of day or night"
+    },
+    "formTitle": "Book Airport Transfer",
+    "arrival": "Arrival",
+    "departure": "Departure",
+    "dropoffLabel": "Drop-off Location",
+    "pickupLabel": "Pickup Location",
+    "locationPlaceholder": "Enter hotel / villa name or address",
+    "dateLabel": "Date",
+    "passengersLabel": "Passengers",
+    "searchBtn": "Search Transfer",
+    "guarantee": "Free cancellation • Instant confirmation • Best price guarantee"
+  },
+  "activities": {
+    "title": "All Activities",
+    "found": "activities found",
+    "filter": "Filter",
+    "seeMore": "See More Activities",
+    "noResults": "No activities found for this category."
+  },
+  "destinations": {
+    "title": "Popular Destinations",
+    "seeMore": "See More"
+  },
+  "guide": {
+    "title": "Travel Guide & Tips",
+    "subtitle": "Discover amazing places and insider tips",
+    "seeMore": "See More"
+  },
+  "booking": {
+    "title": "Book Activity",
+    "subtitle": "Complete your booking in 3 easy steps",
+    "steps": {
+      "details": "Details",
+      "contact": "Contact",
+      "confirm": "Confirm"
+    },
+    "packageSummary": "Booking Summary",
+    "dateLabel": "Tour Date",
+    "datePlaceholder": "Select date",
+    "passengersLabel": "Number of Passengers",
+    "maxPassengers": "max 20",
+    "pickupLabel": "Pickup Location",
+    "pickupPlaceholder": "Hotel name, villa address, or area...",
+    "estimatedTotal": "Estimated Total",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "Your full name",
+    "whatsappLabel": "WhatsApp Number",
+    "whatsappPlaceholder": "+62 812-xxxx-xxxx",
+    "emailLabel": "Email",
+    "emailOptional": "(optional)",
+    "emailPlaceholder": "your@email.com",
+    "notesLabel": "Special Requests",
+    "notesOptional": "(optional)",
+    "notesPlaceholder": "Dietary requirements, accessibility needs, specific requests...",
+    "totalPayment": "Total Payment",
+    "freeCancel": "Free cancellation up to 24 hours before the tour. Instant confirmation via WhatsApp.",
+    "continue": "Continue",
+    "back": "Back",
+    "confirmWhatsapp": "Confirm via WhatsApp",
+    "noCredit": "Free cancellation · No credit card required",
+    "contactNote": "We'll use these details to confirm your booking."
+  },
+  "footer": {
+    "tagline": "Your #1 trusted private driver and tour operator in Bali. Explore Bali safely with our professional local drivers.",
+    "services": "Services",
+    "destinations": "Destinations",
+    "company": "Company",
+    "links": {
+      "services": ["Airport Transfer", "Private Driver", "Day Tours", "Multi-Day Tours", "Custom Tours"],
+      "destinations": ["Ubud", "Kuta & Seminyak", "Uluwatu", "Canggu", "Nusa Penida"],
+      "company": ["About Us", "Contact", "Blog", "FAQ", "Terms & Conditions"]
+    },
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy"
+  },
+  "common": {
+    "perPerson": "/ person",
+    "from": "From",
+    "dayTrip": "Day Trip",
+    "reviews": "reviews",
+    "passenger": "passenger",
+    "passengers": "passengers"
+  }
+}
