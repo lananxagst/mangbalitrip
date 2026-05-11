@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   X,
@@ -13,9 +13,13 @@ import {
   CheckCircle,
   ChevronRight,
   Star,
+  CreditCard,
+  Loader2,
+  AlertCircle,
 } from "lucide-react";
 import { useBooking } from "../context/BookingContext";
 import LocationAutocomplete from "./LocationAutocomplete";
+import { useMidtransSnap } from "../hooks/useMidtransSnap";
 
 function StepBar({ step }: { step: number }) {
   const { t } = useTranslation();
@@ -64,6 +68,7 @@ function StepBar({ step }: { step: number }) {
 
 export default function BookingModal() {
   const { t } = useTranslation();
+  useMidtransSnap();
   const {
     isOpen,
     selectedPackage,
@@ -74,6 +79,8 @@ export default function BookingModal() {
     setStep,
     updateForm,
   } = useBooking();
+  const [payLoading, setPayLoading] = useState(false);
+  const [payError, setPayError]   = useState("");
 
   const pkg = selectedPackage;
   const drvPkg = selectedDriverPackage;
@@ -107,22 +114,67 @@ export default function BookingModal() {
   const isStep1Valid = form.date && form.pickupLocation;
   const isStep2Valid = form.name && form.whatsapp;
 
-  const handleConfirm = () => {
-    const msg = encodeURIComponent(
-      `Hello! I'd like to book:\n\n` +
-      `📦 *${title}*\n` +
-      `📅 Date: ${form.date}\n` +
-      `👥 Passengers: ${form.passengers}\n` +
-      `📍 Pickup: ${form.pickupLocation}\n` +
-      `👤 Name: ${form.name}\n` +
-      `📱 WhatsApp: ${form.whatsapp}\n` +
-      `📧 Email: ${form.email || "-"}\n` +
-      `💬 Notes: ${form.specialRequests || "-"}\n\n` +
-      `💰 Total: ${formatPrice(totalPrice)}\n\n` +
-      `Please confirm my booking. Thank you!`
-    );
-    window.open(`https://wa.me/6281234567890?text=${msg}`, "_blank");
-    closeBooking();
+  const handlePayNow = async () => {
+    setPayError("");
+    if (!window.snap) {
+      setPayError("Payment system not loaded yet. Please try again in a moment.");
+      return;
+    }
+    setPayLoading(true);
+    try {
+      const res = await fetch("/api/payment/create-transaction", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          packageTitle: title,
+          packageId: pkg?.id ?? title.toLowerCase().replace(/\s+/g, "-").slice(0, 20),
+          passengers: form.passengers,
+          pricePerPerson: price,
+          totalAmount: totalPrice,
+          name: form.name,
+          email: form.email || undefined,
+          phone: form.whatsapp,
+          date: form.date,
+          pickupLocation: form.pickupLocation,
+        }),
+      });
+      if (!res.ok) throw new Error(await res.text());
+      const { token, order_id } = await res.json();
+      setPayLoading(false);
+      window.snap.pay(token, {
+        onSuccess: (result) => {
+          console.log("Payment success:", result);
+          const msg = encodeURIComponent(
+            `✅ *Payment Confirmed!*\n\n` +
+            `� ${title}\n` +
+            `🆔 Order: ${order_id}\n` +
+            `📅 Date: ${form.date}\n` +
+            `� Passengers: ${form.passengers}\n` +
+            `� Pickup: ${form.pickupLocation}\n` +
+            `� Name: ${form.name}\n` +
+            `💰 Total: ${formatPrice(totalPrice)}\n\n` +
+            `Payment method: ${result.payment_type ?? "-"}`
+          );
+          window.open(`https://wa.me/6281234567890?text=${msg}`, "_blank");
+          closeBooking();
+        },
+        onPending: (result) => {
+          console.log("Payment pending:", result);
+          setPayError("Payment is pending. Please complete your payment.");
+        },
+        onError: (result) => {
+          console.error("Payment error:", result);
+          setPayError("Payment failed. Please try again.");
+        },
+        onClose: () => {
+          setPayError("Payment window closed. Click Pay Now to try again.");
+        },
+      });
+    } catch (err) {
+      setPayLoading(false);
+      setPayError("Failed to start payment. Please check your connection.");
+      console.error(err);
+    }
   };
 
   return (
@@ -378,6 +430,24 @@ export default function BookingModal() {
                   <span><strong className="text-gray-800">{pkg.rating}</strong> · {pkg.reviews.toLocaleString()} verified reviews</span>
                 </div>
               )}
+
+              {/* Payment error */}
+              {payError && (
+                <div className="flex items-start gap-2 bg-red-50 border border-red-200 rounded-xl px-3 py-2.5">
+                  <AlertCircle size={14} className="text-red-500 flex-shrink-0 mt-0.5" />
+                  <p className="text-xs text-red-600">{payError}</p>
+                </div>
+              )}
+
+              {/* Payment methods note */}
+              <div className="flex items-center justify-center gap-3 pt-1">
+                <span className="text-[10px] text-gray-400 uppercase tracking-wide">Accepted payments</span>
+                <div className="flex items-center gap-2">
+                  {["VISA","GoPay","OVO","DANA","BCA","BNI"].map((m) => (
+                    <span key={m} className="text-[9px] font-bold bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded">{m}</span>
+                  ))}
+                </div>
+              </div>
             </div>
           )}
         </div>
@@ -404,13 +474,15 @@ export default function BookingModal() {
               </button>
             ) : (
               <button
-                onClick={handleConfirm}
-                className="flex-1 bg-bali-green hover:bg-green-700 text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md"
+                onClick={handlePayNow}
+                disabled={payLoading}
+                className="flex-1 bg-primary-500 hover:bg-primary-600 disabled:bg-primary-300 disabled:cursor-not-allowed text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md"
               >
-                {t("booking.confirmWhatsapp")}
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
-                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                </svg>
+                {payLoading ? (
+                  <><Loader2 size={16} className="animate-spin" /> Processing...</>
+                ) : (
+                  <><CreditCard size={16} /> Pay Now &mdash; {formatPrice(totalPrice)}</>
+                )}
               </button>
             )}
           </div>

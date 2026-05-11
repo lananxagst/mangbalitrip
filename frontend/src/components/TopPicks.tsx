@@ -53,11 +53,9 @@ export default function TopPicks() {
       if (pausedRef.current || !scrollRef.current || topPicks.length < 2) return;
       const el = scrollRef.current;
       const cardW = getCardWidth();
-      const maxScroll = el.scrollWidth - el.clientWidth;
-      const next = el.scrollLeft + cardW > maxScroll - 4
-        ? 0
-        : el.scrollLeft + cardW;
-      el.scrollTo({ left: next, behavior: "smooth" });
+      const currentIdx = Math.round(el.scrollLeft / cardW);
+      const nextIdx = currentIdx >= topPicks.length - 1 ? 0 : currentIdx + 1;
+      el.scrollTo({ left: nextIdx * cardW, behavior: "smooth" });
     }, 3500);
   }, [getCardWidth, topPicks.length]);
 
@@ -108,7 +106,7 @@ export default function TopPicks() {
           {loading ? (
             <div className="flex gap-4 overflow-hidden">
               {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="flex-shrink-0 w-full sm:w-72 h-72 bg-gray-100 rounded-2xl animate-pulse" />
+                <div key={i} className="flex-shrink-0 w-full sm:w-72 lg:w-80 h-72 bg-gray-100 rounded-2xl animate-pulse" />
               ))}
             </div>
           ) : (
@@ -130,7 +128,7 @@ export default function TopPicks() {
                 {topPicks.map((pkg) => (
                   <div
                     key={pkg.id}
-                    className="flex-shrink-0 w-full sm:w-72"
+                    className="flex-shrink-0 w-full sm:w-72 lg:w-80"
                     style={{ scrollSnapAlign: "start" }}
                   >
                     <PackageCard pkg={pkg} />

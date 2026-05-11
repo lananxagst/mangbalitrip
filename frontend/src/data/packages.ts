@@ -1,4 +1,4 @@
-// Types only — data is served from MongoDB via /api endpoints
+// Types only â€” data is served from MongoDB via /api endpoints
 
 export interface Package {
   id: string;
